@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form method="post">
+        {% csrf_token %}
+        <label for="title">Title:</label>
+        <input type="text" name="title" placeholder="Title">
+        <br>
+        <label for="author">Author:</label>
+        <input type="text" name="author" placeholder="Author"> 
+        <br>
+        <label for="published_year" >Published_year</label>
+        <input type="text" name="published_year" placeholder="Published year">
+
+        <input type="submit" value="add">
+    </form>
+    <a href="{% url 'index' %}">Add new book</a>
+
+</body>
+</html>
